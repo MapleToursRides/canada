@@ -1,2 +1,2 @@
 # canada
-Official website for mapletours and 
+Official website for MapleToursRides
