@@ -1,0 +1,162 @@
+/* style.css for Maple Tours Rides */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fb;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #003c5e;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?travel,bus,highway') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: #0056b3;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #003c80;
+}
+
+.fleet-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.fleet-section h2 {
+  color: #003c5e;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.fleet-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 20px;
+  text-align: left;
+}
+
+.fleet-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.booking-section, .contact-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.booking-section h2, .contact-section h2 {
+  color: #003c5e;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.booking-section p, .contact-section p {
+  font-size: 16px;
+  color: #444;
+}
+
+footer {
+  background-color: #003c5e;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
