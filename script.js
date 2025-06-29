@@ -1,4 +1,4 @@
 // script.js for Maple Tours Rides
 function redirectToForm() {
-  window.open("https://docs.google.com/forms/d/18hj4sUd-bjiVxLDhJiaa6zBjVVd4olIwltVnbpx8lnM/edit", "_blank");
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSdpJNsEH75auPfpUH4qNTk1cyLuDlAghr2iKTjMDucMm5WjrA/viewform?usp=dialog", "_blank");
 }
