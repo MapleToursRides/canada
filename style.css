@@ -151,6 +151,25 @@ footer p {
   font-size: 14px;
 }
 
+/* WhatsApp floating button */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 14px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-chat:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 600px) {
   .hero-text h1 {
     font-size: 32px;
