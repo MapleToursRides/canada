@@ -1,4 +1,11 @@
-/* style.css for Maple Tours Rides */
+:root {
+  /* High contrast color palette */
+  --primary-bg: #ffffff;
+  --header-bg: #002d4a; /* Darker for better contrast */
+  --text-main: #1a1a1a; /* Almost black for legibility */
+  --accent-color: #0056b3; 
+  --focus-outline: #ffcc00; /* Bright yellow for keyboard focus */
+}
 
 * {
   box-sizing: border-box;
@@ -7,175 +14,68 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f9fb;
-  color: #2c3e50;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 18px; /* Larger base font for old age accessibility */
+  background-color: var(--primary-bg);
+  color: var(--text-main);
+  line-height: 1.8;
+}
+
+/* Clear Focus States for Keyboard Users */
+a:focus, button:focus {
+  outline: 4px solid var(--focus-outline);
+  outline-offset: 2px;
 }
 
 header {
-  background-color: #003c5e;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
+  background-color: var(--header-bg);
   padding: 10px 0;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
+.nav-links a {
   color: #ffffff;
+  text-decoration: underline; /* Underlines help color-blind users identify links */
+  text-underline-offset: 4px;
+}
+
+.nav-links a:hover {
+  background-color: #ffffff;
+  color: var(--header-bg);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ffcc00;
-}
-
-.hero {
-  background: url('https://source.unsplash.com/1600x600/?travel,bus,highway') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero-text p {
-  font-size: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
+/* Buttons with clear contrast */
 .btn-primary, .btn-secondary {
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 15px;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #000000; /* Black background for maximum contrast */
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .btn-secondary {
-  background-color: #0056b3;
-}
-
-.btn-primary:hover, .btn-secondary:hover {
-  background-color: #003c80;
-}
-
-.fleet-section {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #ffffff;
-}
-
-.fleet-section h2 {
-  color: #003c5e;
-  margin-bottom: 20px;
-  font-size: 32px;
-}
-
-.fleet-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+    background-color: #004085;
 }
 
 .fleet-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  padding: 20px;
-  text-align: left;
+  border: 2px solid #ddd; /* Clearer borders for visual separation */
+  padding: 2rem;
 }
 
-.fleet-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 10px;
+/* Enhanced Placeholder for Visual Clarity */
+.img-placeholder {
+  background-color: #f0f0f0;
+  border: 3px solid #333;
+  color: #000;
+  font-weight: bold;
 }
 
-.booking-section, .contact-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.booking-section h2, .contact-section h2 {
-  color: #003c5e;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.booking-section p, .contact-section p {
-  font-size: 16px;
-  color: #444;
-}
-
-footer {
-  background-color: #003c5e;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-footer p {
-  font-size: 14px;
-}
-
-/* WhatsApp floating button */
-.whatsapp-chat {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: #fff;
-  padding: 14px;
-  border-radius: 50%;
-  text-align: center;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-chat:hover {
-  transform: scale(1.1);
-}
-
-@media (max-width: 600px) {
-  .hero-text h1 {
-    font-size: 32px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
+@media (max-width: 768px) {
+  .nav-links {
+    font-size: 1.4rem; /* Even larger on mobile for easier tapping */
   }
 }
