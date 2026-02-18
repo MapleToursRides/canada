@@ -1,81 +1,79 @@
-:root {
-  /* High contrast color palette */
-  --primary-bg: #ffffff;
-  --header-bg: #002d4a; /* Darker for better contrast */
-  --text-main: #1a1a1a; /* Almost black for legibility */
-  --accent-color: #0056b3; 
-  --focus-outline: #ffcc00; /* Bright yellow for keyboard focus */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maple Tours Rides | Accessible Travel Ontario</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header role="banner">
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">Maple Tours Rides</div>
+      <button class="menu-toggle" id="mobile-menu" aria-label="Open navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#fleet">Our Fleet</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <main>
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text">
+        <h1 id="hero-heading">Comfortable Rides. Trusted Service.</h1>
+        <p>Your journey across Ontario begins with Maple Tours Rides.</p>
+        <a href="#booking" class="btn-primary">Book Your Ride Now</a>
+      </div>
+    </section>
 
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  font-size: 18px; /* Larger base font for old age accessibility */
-  background-color: var(--primary-bg);
-  color: var(--text-main);
-  line-height: 1.8;
-}
+    <section id="fleet" class="fleet-section" aria-labelledby="fleet-heading">
+      <h2 id="fleet-heading">Our Fleet</h2>
+      <div class="fleet-grid">
+        <article class="fleet-card">
+          <div class="img-placeholder" role="img" aria-label="Placeholder for 12-Seater Ford Transit Van">12-Seater Van</div>
+          <h3>2020 Ford Transit 350 (White)</h3>
+          <p>Spacious 12-seater van, ideal for seniors and group tours.</p>
+        </article>
+        
+        <article class="fleet-card">
+          <div class="img-placeholder" role="img" aria-label="Placeholder for Toyota RAV4 SUV">SUV Image</div>
+          <h3>2024 Toyota RAV4 (Black)</h3>
+          <p>Reliable SUV for comfortable and safe city rides.</p>
+        </article>
+      </div>
+    </section>
 
-/* Clear Focus States for Keyboard Users */
-a:focus, button:focus {
-  outline: 4px solid var(--focus-outline);
-  outline-offset: 2px;
-}
+    <section id="booking" class="booking-section">
+      <h2>Make a Reservation</h2>
+      <p>Secure your ride by filling out our simple request form.</p>
+      <button class="btn-secondary" onclick="redirectToForm()">Book via Google Form</button>
+    </section>
 
-header {
-  background-color: var(--header-bg);
-  padding: 10px 0;
-}
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+          <p>Email: <a href="mailto:mapletoursrides@gmail.com">mapletoursrides@gmail.com</a></p>
+          <p>Phone: <a href="tel:+12267925351" aria-label="Call us at +1 226 792 5351">+1 (226) 792-5351</a></p>
+          <p>Location: Kitchener, ON</p>
+      </div>
+    </section>
+  </main>
 
-.nav-links a {
-  color: #ffffff;
-  text-decoration: underline; /* Underlines help color-blind users identify links */
-  text-underline-offset: 4px;
-}
+  <footer role="contentinfo">
+    <p>&copy; 2024 Maple Tours Rides. All rights reserved.</p>
+  </footer>
 
-.nav-links a:hover {
-  background-color: #ffffff;
-  color: var(--header-bg);
-  text-decoration: none;
-}
+  <a href="https://wa.me/12267925351" class="whatsapp-chat" aria-label="Chat with us on WhatsApp" target="_blank">
+    </a>
 
-/* Buttons with clear contrast */
-.btn-primary, .btn-secondary {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #000000; /* Black background for maximum contrast */
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.btn-secondary {
-    background-color: #004085;
-}
-
-.fleet-card {
-  border: 2px solid #ddd; /* Clearer borders for visual separation */
-  padding: 2rem;
-}
-
-/* Enhanced Placeholder for Visual Clarity */
-.img-placeholder {
-  background-color: #f0f0f0;
-  border: 3px solid #333;
-  color: #000;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    font-size: 1.4rem; /* Even larger on mobile for easier tapping */
-  }
-}
+  <script src="script.js"></script>
+</body>
+</html>
